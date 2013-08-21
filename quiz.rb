@@ -11,8 +11,35 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+class Sleep
+  def sleep_in!(options = {})
+    # today(options[:day])
+  end
 end
+
+sleep = Sleep.new
+  if today.sleep_in?
+
+
+  def sleep_in?
+    if Time.new.wday == 0 || Time.new.wday == 6
+      return true
+    else
+      return false
+    end
+  end
+
+
+#  THE BELOW WORKS BUT DOES NOT INCLUDE THE OPTION PARAMETER
+# class Sleep
+#   def sleep_in?
+#     if Time.new.wday == 0 || Time.new.wday == 6
+#       return true
+#     else
+#       return false
+#     end
+#   end
+# end
 
 # Question 2: a function called del_del
 #############
@@ -22,6 +49,12 @@ end
 
 # Question 3: a function called missingChar
 #############
+
+def missing_char
+  string = "hello"
+
+end
+
 # Remove the character that corresponds to the index from the string.
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
@@ -29,6 +62,9 @@ end
 
 # Question 4: a function called nearHundred
 #############
+
+def nearHundred
+  end
 # Write a function called nearHundred
 # If the number is between 90 and 99, the result is true;
 # If it is 89 or below, it is false.
