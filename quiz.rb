@@ -20,12 +20,18 @@ end
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
 
+def del_del
+end
+
 # Question 3: a function called missingChar
 #############
 # Remove the character that corresponds to the index from the string.
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+
+def missingChar
+end
 
 # Question 4: a function called nearHundred
 #############
@@ -36,8 +42,15 @@ end
 # near_hundred(52) => false
 # near_hundred('two') => RuntimeError: Please enter a number!
 
+def nearHundred
+end
+
 # Question 5: a method called back_around
 #############
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
+
+def back_around
+end
+

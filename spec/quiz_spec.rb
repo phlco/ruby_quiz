@@ -8,6 +8,11 @@ require_relative '../quiz'
 
 # The first question's tests are written.
 # run rspec quiz_spec.rb
+
+# Write a function called sleep_in?
+# You can sleep in if it is not a weekday or if you are on vacation.
+# sleep_in? => false
+# sleep_in?(vacation: true) => true
 describe "question 1: a function called sleep_in?" do
 
   it "returns true if the current day is Saturday or Sunday" do
@@ -33,12 +38,20 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+describe "question 2: a function called del_del" do
+  it { should_not include("del") }
+end
+
 
 # Question 3: a function called missingChar
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
+describe "question 3: a function called missingChar" do
+  "kitten".should_not include(1)
+end
+
 
 # Question 4: a function called nearHundred
   # Example Usage:
@@ -46,7 +59,18 @@ end
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
 
+describe "question 3: a function called nearHundred" do
+  it { should be_within(9).of(100) }
+end
+
+
 # Question 5: a method called back_around
   # Example Usage:
   # "cat".back_around => "tca"
   # "hello".back_around => "ohell"
+
+
+
+
+
+
