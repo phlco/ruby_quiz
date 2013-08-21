@@ -37,12 +37,12 @@ describe "question 2: a function called del_del" do
 
   it "returns the string with 'del' removed" do
     question_2 = del_del("abdelcd")
-    expect (question_2).to be("abcd")
+    (question_2).should eq("abcd")
   end
 
   it "does not change a string that has no 'del'" do
     question_2 = del_del("xyz")
-    expect(question_2).to be("xyz")
+    (question_2).should eq("xyz")
   end
 end
 
