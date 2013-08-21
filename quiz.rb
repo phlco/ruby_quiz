@@ -5,6 +5,47 @@
 #     |  |     |  |  |  | |  | .----)   |      |  | .----)   |       /  _____  \     |  `--'  '--.|  `--'  | |  |   /  /----.__
 #     |__|     |__|  |__| |__| |_______/       |__| |_______/       /__/     \__\     \_____\_____\\______/  |__|  /________(__)
 
+
+def sleep_in?(day)
+  array_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+  array_days.each do |array_day|
+  if array_day = "Saturday" || "Sunday"
+    return true
+  else
+    return false
+    end
+  end
+end
+
+
+def del_del(string)
+  return string.delete "d", "e", "l"
+end
+
+def missing_char(string, index)
+
+end
+
+def near_hundred(number)
+  if number > 90
+    return true
+  else
+    return false
+  end
+end
+
+def back_around
+  string[-1].
+  end
+
+  #number_array = (1..1
+  #random_number =number_array.shuffle.first
+
+
+
+
+
+
 # Question 1: a function called sleep_in?
 #############
 # Write a function called sleep_in?
