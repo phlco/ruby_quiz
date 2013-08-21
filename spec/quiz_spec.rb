@@ -34,17 +34,47 @@ end
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
 
+describe "question 2: a function called del_del" do
+  it "returns 'abcd' if the input was 'abdelcd'" do
+    result = del_del('abdelcd')
+    expect(result).to eq('abcd')
+    # expect(result).to be('abcd')
+  end
+
+  it "returns 'xyz' if the input was 'xyz'" do
+    result = del_del('xyz')
+    # expect(result).to be('xyz')
+    expect(result).to eq('xyz')
+  end
+end
+
 # Question 3: a function called missingChar
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
 
+describe "question 3: a function called missingChar" do
+  it "returns 'ktten' if the input was 'kitten' when index parameter was 1" do
+    result = missingChar('kitten', 1)
+    expect(result).to eq('ktten')
+    # expect(result).to be('ktten')
+  end
+
+  it "returns raise RuntimeError if the input was a number" do
+    # result = missingChar(347, 1)
+    expect{missingChar(347, 1)}.to raise_error(RuntimeError, "Please enter a string!")
+  end
+end
+
+
 # Question 4: a function called nearHundred
   # Example Usage:
   # 93.near_hundred? => true
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
+
+
 
 # Question 5: a method called back_around
   # Example Usage:
