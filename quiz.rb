@@ -11,8 +11,16 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+
+weekdays = [Monday, Tuesday, Wednesday, Thursday, Friday]
+
+def sleep_in?(day_of_week)
+  if weekdays.include?(day_of_week)
+    return true
+  else
+    return false
 end
+
 
 # Question 2: a function called del_del
 #############
@@ -20,12 +28,21 @@ end
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
 
+def del_del(word)
+  word = word.replace("del", "")
+end
+
 # Question 3: a function called missingChar
 #############
 # Remove the character that corresponds to the index from the string.
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+
+def missingChar(word, index)
+  array = []
+  array << word
+
 
 # Question 4: a function called nearHundred
 #############

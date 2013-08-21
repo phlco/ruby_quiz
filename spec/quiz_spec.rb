@@ -12,6 +12,7 @@ describe "question 1: a function called sleep_in?" do
 
   it "returns true if the current day is Saturday or Sunday" do
     # assuming you're answering this on a weekday!
+    weekday = "Monday"
     expect(sleep_in?).to be(false)
   end
 
@@ -25,6 +26,7 @@ describe "question 1: a function called sleep_in?" do
     expect(question_1).to be(true)
   end
 end
+
 
 # Write the next tests yourself!
 # See quiz.rb for more details
