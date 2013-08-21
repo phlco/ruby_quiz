@@ -33,20 +33,61 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+describe "question 2" do
+  it "should delete del" do
+    expect(del_del("abdelcd")).to eq "abcd"
+  end
+
+  it "should not delete anything else" do
+    expect(del_del("xyz")).to eq "xyz"
+  end
+end
 
 # Question 3: a function called missingChar
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
+describe "question 3" do
+  it "should delete the character at the index" do
+    expect(missing_char("kitten", 1)).to eq "ktten"
+  end
+
+  it "should require a string" do
+    expect(missing_char(347, 1)).to raise_error(RuntimeError)
+  end
+end
 
 # Question 4: a function called nearHundred
   # Example Usage:
   # 93.near_hundred? => true
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
+describe "question 4" do
+  it "should say 93 is near one hundred" do
+    # ??????
+    expect(nearHundred(93)).to be true
+  end
+
+  it "should say 52 is not near 100" do
+    expect(nearHundred(52)).to be false
+  end
+
+  it "should raise an error for a non number" do
+    expect(nearHundred('two')).to raise_error(RuntimeError)
+  end
+end
 
 # Question 5: a method called back_around
   # Example Usage:
   # "cat".back_around => "tca"
   # "hello".back_around => "ohell"
+describe "question 5" do
+  it "should make cat into tca" do
+    expect(back_around("cat")).to eq "tca"
+  end
+
+  it "should make hello into ohell" do
+    expect(back_around("hello")).to eq "ohell"
+  end
+end
