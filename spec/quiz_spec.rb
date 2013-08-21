@@ -33,12 +33,32 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+  describe "question 2: a function called del_del" do
 
+    it "returns a string without del" do
+      expect("abdelcd").to be("abcd")
+    end
+
+    it "returns the same string when it doesn't have del" do
+      expect("xyz").to be equal("xyz")
+    end
+  end
 # Question 3: a function called missingChar
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
+
+describe "question 3: a function called missingChar" do
+
+  it "only takes the parameters of a string and integer" do
+    expect(1, "dst").to be(RuntimeError)
+  end
+
+  it "expects to remove letter at the index" do
+    expect("cat", 2).to be("ct")
+  end
+end
 
 # Question 4: a function called nearHundred
   # Example Usage:
@@ -46,7 +66,34 @@ end
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
 
+
+describe "quetion 4: a function called nearHundred" do
+
+  it "only takes an integer" do
+    expect(('number').near_hundred).to be(RuntimeError)
+  end
+
+  it "returns false when not near one hundred" do
+    expect(50.near_hundred).to be(false)
+  end
+
+  it "returns true when number near one hundred" do
+    expect(95.near_hundred).to be(true)
+  end
+end
+
 # Question 5: a method called back_around
   # Example Usage:
   # "cat".back_around => "tca"
   # "hello".back_around => "ohell"
+
+describe "question 5: a function called back_around" do
+
+  it "returns the word backward" do
+    expect("cat").to be("tac")
+  end
+end
+
+
+
+
