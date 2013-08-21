@@ -8,23 +8,23 @@ require_relative '../quiz'
 
 # The first question's tests are written.
 # run rspec quiz_spec.rb
-describe "question 1: a function called sleep_in?" do
+# describe "question 1: a function called sleep_in?" do
 
-  it "returns true if the current day is Saturday or Sunday" do
-    # assuming you're answering this on a weekday!
-    expect(sleep_in?).to be(false)
-  end
+#   it "returns true if the current day is Saturday or Sunday" do
+#     # assuming you're answering this on a weekday!
+#     expect(sleep_in?).to be(false)
+#   end
 
-  it "takes an options hash as a parameter" do
-    parameters = method(:sleep_in?).parameters.first
-    expect(parameters).to include(:options)
-  end
+#   it "takes an options hash as a parameter" do
+#     parameters = method(:sleep_in?).parameters.first
+#     expect(parameters).to include(:options)
+#   end
 
-  it "returns true if vacation is true" do
-    question_1 = sleep_in?(vacation: true)
-    expect(question_1).to be(true)
-  end
-end
+#   it "returns true if vacation is true" do
+#     question_1 = sleep_in?(vacation: true)
+#     expect(question_1).to be(true)
+#   end
+# end
 
 # Write the next tests yourself!
 # See quiz.rb for more details
@@ -36,9 +36,18 @@ end
 
 # Question 3: a function called missingChar
   # Example Usage:
-  # missing_char("kitten", 1) => "ktten"
+  # missing_char("kittie", 1) => "kttie"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
+describe("question 2: a function called missingChar") do
+  it "takes kitten and returns ktten" do
+    expect(missing_char("kitten", 1)).to eq("ktten")
+  end
+
+  it "takes kittie and returns kttie" do
+    expect(missing_char("kitten", 1)).to eq("ktten")
+  end
+end
 
 # Question 4: a function called nearHundred
   # Example Usage:

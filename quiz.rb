@@ -24,7 +24,7 @@ end
 #############
 # Remove the character that corresponds to the index from the string.
 # If you don't enter a string
-# missing_char("kitten", 1) => "ktten"
+# missing_char("kittie", 1) => "kttie"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
 
 # Question 4: a function called nearHundred
