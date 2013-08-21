@@ -33,6 +33,18 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+describe "question 2: a function called del_del" do
+
+  it "returns the string with 'del' removed" do
+    question_2 = del_del("abdelcd")
+    expect (question_2).to be("abcd")
+  end
+
+  it "does not change a string that has no 'del'" do
+    question_2 = del_del("xyz")
+    expect(question_2).to be("xyz")
+  end
+end
 
 # Question 3: a function called missingChar
   # Example Usage:
