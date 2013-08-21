@@ -34,11 +34,16 @@ end
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
 
+# weeeeelllll
+
+
 # Question 3: a function called missingChar
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
+
+# Feel like I should have written the tests first.
 
 # Question 4: a function called nearHundred
   # Example Usage:
