@@ -46,7 +46,10 @@ def missingChar(string, number)
   string = string
   index = number
   if string.class == String
-
+    string[index] = ""
+    return string
+  else
+    raise RuntimeError("Please enter a string!")
   end
 end
 
