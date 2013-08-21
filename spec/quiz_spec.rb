@@ -39,15 +39,6 @@ require_relative '../quiz'
   # missing_char("kittie", 1) => "kttie"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
-describe("question 2: a function called missingChar") do
-  it "takes kitten and returns ktten" do
-    expect(missing_char("kitten", 1)).to eq("ktten")
-  end
-
-  it "takes kittie and returns kttie" do
-    expect(missing_char("kitten", 1)).to eq("ktten")
-  end
-end
 
 # Question 4: a function called nearHundred
   # Example Usage:
