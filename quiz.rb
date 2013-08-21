@@ -11,7 +11,15 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options = {})
+  if options[:vacation] == true
+    return true
+  end
+  today = Time.now.strftime("%A")
+  if today == "Saturday" || today == "Sunday"
+    return true
+  end
+  return false
 end
 
 # Question 2: a function called del_del
@@ -20,12 +28,25 @@ end
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
 
+def del_del(text)
+  return text.gsub("del", "")
+end
+
 # Question 3: a function called missingChar
 #############
 # Remove the character that corresponds to the index from the string.
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+
+def missing_char(text, index)
+  begin
+    new_text = text.slice(0, index).concat(text.slice(index + 1, text.length - 1))
+    return new_text
+  rescue
+    raise RuntimeError, "Please enter a string!"
+  end
+end
 
 # Question 4: a function called nearHundred
 #############
@@ -35,6 +56,17 @@ end
 # 93.near_hundred? => true
 # near_hundred(52) => false
 # near_hundred('two') => RuntimeError: Please enter a number!
+
+def nearHundred(num)
+  if num.class == String
+    raise RuntimeError, "Please enter a number!"
+  else
+    if num > 89 && num < 111
+      return true
+    end
+    return false
+  end
+end
 
 # Question 5: a method called back_around
 #############

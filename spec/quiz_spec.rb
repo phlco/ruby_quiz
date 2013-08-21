@@ -34,17 +34,61 @@ end
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
 
+describe "question 2: a function called del_del" do
+
+  it "returns 'abcd' when given 'abdelcd'" do
+    text = del_del('abdelcd')
+    expect(text).to eq('abcd')
+  end
+
+  it "returns 'xyz' when given 'xyz'" do
+    text = del_del('xyz')
+    expect(text).to eq('xyz')
+  end
+
+end
+
 # Question 3: a function called missingChar
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
-  # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
+
+describe "question 3: a function called missingChar" do
+
+  it "returns 'ktten' when given ('kitten', 1)" do
+    text = missing_char('kitten', 1)
+    expect(text).to eq('ktten')
+  end
+
+  it "throws a runtime error on invalid input" do
+    expect(missing_char(317, 1)).to raise_error(RuntimeError)
+  end
+
+end
 
 # Question 4: a function called nearHundred
   # Example Usage:
   # 93.near_hundred? => true
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
+
+describe "question 4: a function called nearHundred" do
+
+  it "returns true if the given value is between 90 and 110" do
+    is_it = nearHundred(93)
+    expect(is_it).to be(true)
+  end
+
+  it "returns false if the given value is not between 90 and 110" do
+    is_it = nearHundred(52)
+    expect(is_it).to be(false)
+  end
+
+  it "raises a runtime error on invalid input" do
+    expect(nearHundred('two')).to raise_error(RuntimeError)
+  end
+
+end
 
 # Question 5: a method called back_around
   # Example Usage:
