@@ -33,6 +33,11 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+describe "question 2: a function called del_del" do
+  it "deletes del from strings" do
+    expect(del_del).to !include("del")
+  end
+end
 
 # Question 3: a function called missingChar
   # Example Usage:

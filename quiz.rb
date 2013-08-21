@@ -9,9 +9,14 @@
 #############
 # Write a function called sleep_in?
 # You can sleep in if it is not a weekday or if you are on vacation.
-# sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options)
+  if options == ("Monday" || "Tuesday" || "Wednesday" || "Thursday" || "Friday")
+    return false
+  else
+    return true
+  end
+
 end
 
 # Question 2: a function called del_del
@@ -19,6 +24,10 @@ end
 # Remove "del" from a string.
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
+def del_del()
+  # del_del =~ /[^del]/
+  return "a"
+end
 
 # Question 3: a function called missingChar
 #############
