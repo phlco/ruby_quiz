@@ -11,8 +11,36 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+class Sleep
+  def sleep_in!(options = {})
+    # today(options[:day])
+  end
 end
+
+sleep = Sleep.new
+  if today.sleep_in?
+
+
+  def sleep_in?
+    if Time.new.wday == 0 || Time.new.wday == 6
+      return true
+    else
+      return false
+    end
+  end
+end
+
+
+#  THE BELOW WORKS BUT DOES NOT INCLUDE THE OPTION PARAMETER
+# class Sleep
+#   def sleep_in?
+#     if Time.new.wday == 0 || Time.new.wday == 6
+#       return true
+#     else
+#       return false
+#     end
+#   end
+# end
 
 # Question 2: a function called del_del
 #############
