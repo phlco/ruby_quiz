@@ -34,11 +34,34 @@ end
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
 
+describe "question 2: a function called del_del?" do
+
+  it "returns string without del if the passed string has it" do
+    del_del("dely").should eq("y")
+  end
+
+  it "returns string if it doesn't have del in it" do
+    del_del("hi").should eq("hi")
+  end
+
+end
+
 # Question 3: a function called missingChar
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
+
+describe "question 3: a function called missing_char?" do
+
+  it "should fail if first argument is not a string" do
+    missing_char(1,1).should eq("RuntimeError: Please enter a string!")
+  end
+
+  it "should remove character at corresponding index from string" do
+    missing_char("abc",0).should eq("bc")
+  end
+end
 
 # Question 4: a function called nearHundred
   # Example Usage:

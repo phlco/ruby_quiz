@@ -11,7 +11,14 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options={})
+  time = Time.new
+  if time.wday == (1..5)
+    true
+  else
+    false
+  end
+  true if options[:vacation]
 end
 
 # Question 2: a function called del_del
@@ -19,6 +26,14 @@ end
 # Remove "del" from a string.
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
+def del_del(string)
+  if string.include? "del"
+    string.slice! "del"
+    string
+  else
+    string
+  end
+end
 
 # Question 3: a function called missingChar
 #############
@@ -26,6 +41,17 @@ end
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+
+def missing_char(string,index)
+    if string.class == String
+      string.slice! string[index]
+      string
+    else
+      "RuntimeError: Please enter a string!"
+    end
+end
+
+
 
 # Question 4: a function called nearHundred
 #############
