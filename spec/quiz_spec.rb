@@ -33,20 +33,66 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+describe "question 2: a function called del_del" do
+
+  it "takes a string as a parameter" do
+    expect(parameters).to include(:string)
+  end
+
+  it "returns a string without 'del'" do
+    question_2a = del_del("abdelcd")
+    expect(question_2a).to be("abcd")
+    question_2b = del_del("xyz")
+    expect(question_2b).to be("xyz")
+  end
+end
 
 # Question 3: a function called missingChar
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
+describe "question 3: a function called missingChar" do
+  it "takes in a string and integer parameter" do
+    expect(parameters).to include(:string, :integer)
+  end
+
+  it "removes a character from a string" do
+    question_3a = missing_char("kitten", 1)
+    expect(question_3a).to be("ktten") # should it remove 'i'?
+    question_3b = missing_char(347, 1)
+    expect(question_3b).to be(false) # needs to return 'ERROR'
+  end
+end
 
 # Question 4: a function called nearHundred
   # Example Usage:
   # 93.near_hundred? => true
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
+describe "question 4: a function called nearHundred" do
+  it "evaluates if a number is near 100" do
+    question_4a = 93.near_hundred
+    expect(question_4a).to be(true)
+    
+    question_4b = near_hundred(52)
+    expect(question_4b).to be(false)
+
+    question_4c = near_hundred('two')
+    expect(question_4c).to be(false) # needs to return 'ERROR'
+  end
+end
 
 # Question 5: a method called back_around
   # Example Usage:
   # "cat".back_around => "tca"
   # "hello".back_around => "ohell"
+describe "question 5: a function called back_around" do
+  it "removes a char from end of string and puts it at the beginning" do
+    question_5a = "cat".back_around
+    expect(question_5a).to be("tca")
+    
+    question_5b = "hello".back_around
+    expect(question_5b).to be("elloh")
+  end
+end
