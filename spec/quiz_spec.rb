@@ -34,17 +34,49 @@ end
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
 
+describe "question 2: a function called del_del" do
+
+  # it "returns a string"
+
+  it "returns the parameter string if del is not in the string" do
+    no_remove = del_del("xyz")
+    expect(no_remove).to eq("xyz")
+  end
+
+  it "removes an instance of del found in a string" do
+    remove = del_del("abdelcd")
+    expect(remove).to eq("abcd")
+  end
+
+  it "removes all instances of del found in a string" do
+    multi = del_del("blahdelblahdelblahdel")
+    expect(multi).to eq("blahblahblah")
+  end
+end
+
+
+
 # Question 3: a function called missingChar
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
 
+describe "question 3: a function called missing_char" do
+
+  it "returns a string without the character in " do
+    removed = missing_char("kitten", 1)
+    expect(removed).to eq("ktten")
+  end
+end
+
+
 # Question 4: a function called nearHundred
   # Example Usage:
   # 93.near_hundred? => true
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
+
 
 # Question 5: a method called back_around
   # Example Usage:

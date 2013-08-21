@@ -11,14 +11,30 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+
+
+def sleep_in?(*x)
+  return false
 end
+
 
 # Question 2: a function called del_del
 #############
 # Remove "del" from a string.
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
+
+def del_del(string)
+  if string.index("del") == nil
+    puts string
+  else
+    while string.index("del") != nil
+      excise = string.index("del")
+      string.slice!(excise..excise+2)
+    end
+    puts string
+  end
+end
 
 # Question 3: a function called missingChar
 #############
