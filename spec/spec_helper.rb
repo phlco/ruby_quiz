@@ -16,3 +16,4 @@ RSpec.configure do |config|
   # immediately stop running upon first failure
   c.fail_fast = true
 end
+
