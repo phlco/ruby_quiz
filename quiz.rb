@@ -12,7 +12,8 @@
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
 def sleep_in?(options = {})
-  if options[:vacation]
+  day = Time.now.strftime("%A")
+  if options[:vacation] || day == 'Saturday' || day == 'Sunday'
     return true
   else
     return false
