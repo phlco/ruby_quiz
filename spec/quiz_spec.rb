@@ -84,9 +84,15 @@ describe "question 4: a function called nearHundred" do
 
 end
 
-
-
 # Question 5: a method called back_around
   # Example Usage:
   # "cat".back_around => "tca"
   # "hello".back_around => "ohell"
+
+describe "question 5: a method called back_around" do
+
+  it "Returns the word with its last letter at the front" do
+    expect(back_around("cat").should eq("tca"))
+  end
+
+end

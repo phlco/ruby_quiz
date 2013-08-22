@@ -61,8 +61,13 @@ def nearHundred(num)
     return false
   end
 end
+
 # Question 5: a method called back_around
 #############
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
+def back_around(word)
+  letter = word[word.length - 1, word.length - 1]
+  return letter + word[0, word.length - 1]
+end
