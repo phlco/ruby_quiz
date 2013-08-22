@@ -35,6 +35,13 @@ end
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+def missingChar(word, index)
+  if (word.class != String)
+    raise RuntimeError.new('Please enter a string!')
+  end
+  word.slice!(index)
+  return word
+end
 
 # Question 4: a function called nearHundred
 #############

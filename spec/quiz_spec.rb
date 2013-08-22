@@ -52,6 +52,19 @@ end
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/expect-error
 
+describe "question 3: a function called missingChar" do
+
+  it "Removes the character that corresponds to the index from the string" do
+    question_3 = missingChar("kitten", 1)
+    (question_3).should eq("ktten")
+  end
+
+  it "Returns a RuntimeError if the first parameter is not a string" do
+    lambda {missingChar(347, 1)}.should raise_error(RuntimeError, "Please enter a string!")
+  end
+
+end
+
 # Question 4: a function called nearHundred
   # Example Usage:
   # 93.near_hundred? => true
