@@ -51,7 +51,16 @@ end
 # 93.near_hundred? => true
 # near_hundred(52) => false
 # near_hundred('two') => RuntimeError: Please enter a number!
-
+def nearHundred(num)
+  if (num.class != Fixnum)
+    raise RuntimeError.new('Please enter a number!')
+  end
+  if num >= 90 && num <= 99
+    return true
+  else
+    return false
+  end
+end
 # Question 5: a method called back_around
 #############
 # Given a string, move the last character to the beginning.

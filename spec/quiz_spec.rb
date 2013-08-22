@@ -36,13 +36,11 @@ end
 describe "question 2: a function called del_del" do
 
   it "returns the string with 'del' removed" do
-    question_2 = del_del("abdelcd")
-    (question_2).should eq("abcd")
+    (del_del("abdelcd")).should eq("abcd")
   end
 
   it "does not change a string that has no 'del'" do
-    question_2 = del_del("xyz")
-    (question_2).should eq("xyz")
+    (del_del("xyz")).should eq("xyz")
   end
 end
 
@@ -55,8 +53,7 @@ end
 describe "question 3: a function called missingChar" do
 
   it "Removes the character that corresponds to the index from the string" do
-    question_3 = missingChar("kitten", 1)
-    (question_3).should eq("ktten")
+    (missingChar("kitten", 1)).should eq("ktten")
   end
 
   it "Returns a RuntimeError if the first parameter is not a string" do
@@ -70,6 +67,24 @@ end
   # 93.near_hundred? => true
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
+
+describe "question 4: a function called nearHundred" do
+
+  it "Returns true if the number is between 90 and 99" do
+    expect(nearHundred(93)).to be(true)
+  end
+
+  it "Returns false if the number is 89 or below" do
+    expect(nearHundred(52)).to be(false)
+  end
+
+  it "Returns a RuntimeError if the parameter is not a number" do
+    lambda {nearHundred('two')}.should raise_error(RuntimeError, "Please enter a number!")
+  end
+
+end
+
+
 
 # Question 5: a method called back_around
   # Example Usage:
