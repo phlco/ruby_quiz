@@ -8,23 +8,23 @@ require_relative '../quiz'
 
 # The first question's tests are written.
 # run rspec quiz_spec.rb
-# describe "question 1: a function called sleep_in?" do
+describe "question 1: a function called sleep_in?" do
 
-#   it "returns true if the current day is Saturday or Sunday" do
-#     # assuming you're answering this on a weekday!
-#     expect(sleep_in?).to be(false)
-#   end
+  it "returns true if the current day is Saturday or Sunday" do
+    # assuming you're answering this on a weekday!
+    expect(sleep_in?).to be(false)
+  end
 
-#   it "takes an options hash as a parameter" do
-#     parameters = method(:sleep_in?).parameters.first
-#     expect(parameters).to include(:options)
-#   end
+  it "takes an options hash as a parameter" do
+    parameters = method(:sleep_in?).parameters.first
+    expect(parameters).to include(:options)
+  end
 
-#   it "returns true if vacation is true" do
-#     question_1 = sleep_in?(vacation: true)
-#     expect(question_1).to be(true)
-#   end
-# end
+  it "returns true if vacation is true" do
+    question_1 = sleep_in?(vacation: true)
+    expect(question_1).to be(true)
+  end
+end
 
 # Write the next tests yourself!
 # See quiz.rb for more details
