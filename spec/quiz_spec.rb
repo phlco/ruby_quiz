@@ -54,7 +54,7 @@ describe "question 3" do
   end
 
   it "should require a string" do
-    expect(missing_char(347, 1)).to raise_error(RuntimeError)
+    expect{missing_char(347, 1)}.to raise_error
   end
 end
 
@@ -74,7 +74,7 @@ describe "question 4" do
   end
 
   it "should raise an error for a non number" do
-    expect(nearHundred('two')).to raise_error(RuntimeError)
+    expect{nearHundred('two')}.to raise_error(RuntimeError)
   end
 end
 
@@ -84,10 +84,10 @@ end
   # "hello".back_around => "ohell"
 describe "question 5" do
   it "should make cat into tca" do
-    expect(back_around("cat")).to eq "tca"
+    expect("cat".back_around).to eq "tca"
   end
 
   it "should make hello into ohell" do
-    expect(back_around("hello")).to eq "ohell"
+    expect("hello".back_around).to eq "ohell"
   end
 end

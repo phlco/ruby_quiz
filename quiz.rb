@@ -11,7 +11,7 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?(options)
+def sleep_in?(options = {})
   date = Date.today
   if date.saturday? == true || date.sunday? == true || options == {vacation: true}
     return true
@@ -56,7 +56,7 @@ end
 
 def nearHundred(number)
   if number.class != Fixnum
-    raise RuntimeError, "Please enter a number!"
+    raise "Please enter a number!"
   elsif 89 < number && number < 100
     return true
   elsif number < 90
@@ -68,8 +68,10 @@ end
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
-def back_around(string)
-  string = string[-1] + string
-  string.chop!
-  return string
+class String
+  def back_around
+    string = self[-1] + self
+    string.chop!
+    return string
+  end
 end
