@@ -1,4 +1,4 @@
-![image](https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME].png)
+![image](https://travis-ci.org/phlco/ruby_quiz.png)
 # This is a quiz on ruby and writing tests!
 
 Please see `quiz_spec.rb` and `quiz.rb`.
