@@ -11,7 +11,8 @@ require_relative '../quiz'
 describe "#sleep_in?" do
   it "returns true if the current day is Saturday or Sunday" do
     # assuming you're answering this on a weekday!
-    expect(sleep_in?).to be(false)
+    Time.new.wday = 'Mon'
+    expect(Time.new.wday.sleep_in?).to be(false)
   end
 
   it "takes an options hash as a parameter" do

@@ -11,11 +11,22 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options = {})
+  return true if Time.now.wday = options[:vacation]
+  return true if Time.now.wday = options[:Saturday]
+  return true if Time.now.wday = options[:Sunday]
+  return false if Time.now.wday = options[:Monday]
+  return false if Time.now.wday = options[:Tuesday]
+  return false if Time.now.wday = options[:Wednesday]
+  return false if Time.now.wday = options[:Thursday]
+  return false if Time.now.wday = options[:Friday]
 end
 
 # Question 2: a method called del_del
 #############
+def del_del
+  s.sub!(/del/, '')
+end
 # Remove "del" from a string.
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
